@@ -34,3 +34,6 @@ public function actionLocality() {
         echo Json::encode(['output'=>'', 'selected'=>'']);
     }
 ```
+6. I've already started to learn HTML, CSS and made tasks on the [HTML Academy](https://htmlacademy.ru/), and [Codewars](https://www.codewars.com/).
+7. In 2014 I graduated Belarusian State University of Informatics and Radioelectronics.
+8. One years ago I took English Courses for B1-level in Minsk State Linguistik University.
