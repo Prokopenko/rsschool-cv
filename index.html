@@ -31,7 +31,7 @@
             <li>
                 <p>I’m a head of IT-department of Minsk State Linguistik University. I’ve been working there for about 7 years. I have a lot of knowledge about different software products and systems what is used in the university. I use some programming languages: PHP <i>(Yii2)</i>, C++ <i>(Qt)</i>, C# for creating small projects for the university.</p>
             </li>
-            <li>
+            <li class="code-example-block">
                 <span>Code example:</span>
                 <pre>
                     <code>
@@ -45,7 +45,12 @@
                                 $region = $ids[1];
                                 $type = $ids[2];
                                 if ($type != null) {
-                                    $list = Locality::find()->select(['id_locality','name_locality'])->where(['area' => $area,'region'=>$region,'type_locality'=>$type])->asArray()->all();
+                                    $list = Locality::find()->select(['id_locality','name_locality'])->where(
+                                        [
+                                            'area' => $area,
+                                            'region'=>$region,
+                                            'type_locality'=>$type
+                                        ])->asArray()->all();
                                     $selected  = null;
                                     if (count($list) > 0)
                                     {
@@ -71,6 +76,10 @@
             </li>
             <li>
                 <p>One years ago I took English Courses for B1-level in Minsk State Linguistik University.</p>
+            </li>
+            <li class="photo-block">
+                <span>Picture:</span><br>
+                <img src="images/my-own-picture.jpg" alt="My picture for the CV">
             </li>
         </ol>
     </div>
