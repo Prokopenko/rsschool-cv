@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet">
-    <title>Document</title>
+    <title>CV</title>
 </head>
 <body>
     <div class="container">
@@ -25,11 +25,50 @@
                     </li>
                 </ul>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <p>I want to improve my skills in programming languages. The main goal is connecting my life with software developing. I know, that a lot of developers use programming languages and technologies for web and, as result, I’ve made a choise to learn JS.</p>
+            </li>
+            <li>
+                <p>I’m a head of IT-department of Minsk State Linguistik University. I’ve been working there for about 7 years. I have a lot of knowledge about different software products and systems what is used in the university. I use some programming languages: PHP <i>(Yii2)</i>, C++ <i>(Qt)</i>, C# for creating small projects for the university.</p>
+            </li>
+            <li>
+                <span>Code example:</span>
+                <pre>
+                    <code>
+                        public function actionLocality() {
+                            $out = [];
+                            if (isset($_POST['depdrop_parents'])) 
+                            {
+                                $ids = $_POST['depdrop_parents'];
+                                //print_r($ids);
+                                $area = $ids[0];
+                                $region = $ids[1];
+                                $type = $ids[2];
+                                if ($type != null) {
+                                    $list = Locality::find()->select(['id_locality','name_locality'])->where(['area' => $area,'region'=>$region,'type_locality'=>$type])->asArray()->all();
+                                    $selected  = null;
+                                    if (count($list) > 0)
+                                    {
+                                        foreach ($list as $i => $locality) {
+                                            $out[] = ['id' => $locality['id_locality'], 'name' => $locality['name_locality']];
+                                        }
+                                        // Shows how you can preselect a value
+                                        echo Json::encode(['output' => $out, 'selected'=>'']);
+                                        return;
+                                    }
+                                }
+                            }
+                            echo Json::encode(['output'=>'', 'selected'=>'']);
+                        } 
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>I’ve already started to learn HTML, CSS and made tasks on the <a href="https://htmlacademy.ru/">HTML Academy</a>, and <a href="https://www.codewars.com/">Codewars</a>.</p>
+            </li>
+            <li>
+                <p>In 2014 I graduated Belarusian State University of Informatics and Radioelectronics.</p>
+            </li>
             <li></li>
         </ol>
     </div>
