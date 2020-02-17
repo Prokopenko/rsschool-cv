@@ -1,0 +1,22 @@
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: black;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 25px;
+    width: 1024px;
+    border: 1px solid black;
+}
+
+.container h1 {
+    font-size: 25px;
+    border-bottom: 1px solid #eaecef;
+}
+
+.contact-list li{
+    padding: 5px;
+}
